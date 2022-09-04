@@ -226,6 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 912974079}
   - component: {fileID: 912974078}
+  - component: {fileID: 912974080}
   m_Layer: 0
   m_Name: TestManager
   m_TagString: Untagged
@@ -240,7 +241,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912974077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b157a5542155177448f4c34de0cb88e5, type: 3}
   m_Name: 
@@ -266,6 +267,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &912974080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912974077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b85a9093d8fad9b48a67925e64e5c4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponLists:
+  - {fileID: 11400000, guid: 9f4ec40f83429ad4b9b337d8eee1b9bb, type: 2}
+  - {fileID: 11400000, guid: 908e8bd5ce68bb148b37f8c2a66a0f04, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

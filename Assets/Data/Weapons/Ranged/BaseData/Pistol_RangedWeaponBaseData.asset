@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e67fa272a23dc4a86bad9eec2dcdc2, type: 3}
+  m_Name: Pistol_RangedWeaponBaseData
+  m_EditorClassIdentifier: 
+  weightBase: 4
+  priceBase: 3
+  minMinMeleeDamage: 0.5
+  minMaxMeleeDamage: 1.5
+  maxMinMeleeDamage: 2
+  maxMaxMeleeDamage: 3.5
+  meleeAttackSpeed: 4
+  minMinRangeDamage: 5
+  minMaxRangeDamage: 7
+  maxMinRangeDamage: 10
+  maxMaxRangeDamage: 12
+  rangeAttackSpeed: 2
+  maxClipBulletCapacity: 2
