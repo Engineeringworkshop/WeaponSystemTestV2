@@ -639,3 +639,4 @@ Received Import Request.
 Start importing Assets/Data/Weapons/WeaponActions/AK_SecondaryAttack.asset using Guid(269aaf3553e80ad4385e43767805ade9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66c1eda3f22bc5e51bb5b89167445889') in 0.028227 seconds 
   Import took 0.044514 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
