@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weightBase: 11
   priceBase: 7
+  weaponActionList:
+  - {fileID: 11400000, guid: a777f828a0bf0584aafc986d07429acb, type: 2}
   minMinMeleeDamage: 10
   minMaxMeleeDamage: 30
   maxMinMeleeDamage: 40

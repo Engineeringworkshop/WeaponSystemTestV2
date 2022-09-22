@@ -9,4 +9,5 @@ public class WeaponBaseData : ScriptableObject
     [Header("Base")]
     public float weightBase;
     public float priceBase;
+    public List<PlayerActions> weaponActionList;
 }

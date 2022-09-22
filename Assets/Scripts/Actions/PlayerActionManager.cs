@@ -16,29 +16,61 @@ public class PlayerActionManager : MonoBehaviour
     private PlayerActions primaryAction;
     private PlayerActions secondaryAction;
 
-    // Action list
-    [SerializeField] private List<PlayerActions> actionList = new List<PlayerActions>();
-
     // Referencte to testInventory
     [SerializeField] private TestInventory playerInventory;
 
-    private void Start()
+    private void OnEnable()
     {
-        // Fill action list
-        actionList.Add(new BasicRangedAttack());
-        actionList.Add(new BasicMeleeAttack());
+        // Weapon change event
+        TestInventory.OnWeaponChange += ChangeWeapon;
+    }
 
-        primaryAction = actionList[0];
-        secondaryAction = actionList[1];
+    private void OnDisable()
+    {
+        // Weapon change event
+        TestInventory.OnWeaponChange -= ChangeWeapon;
     }
 
     public void OnPrimaryAction()
     {
-        primaryAction.ExecutePlayerAction();
+        if (primaryAction != null)
+        {
+            primaryAction.ExecutePlayerAction();
+        }
     }
 
     public void OnSecondaryAction()
     {
-        secondaryAction.ExecutePlayerAction();
+        if (secondaryAction != null)
+        {
+            secondaryAction.ExecutePlayerAction();
+        }
+    }
+
+    private void ChangeWeapon()
+    {
+        var currWeapon = playerInventory.ItemGenerated;
+
+        if (currWeapon is MeleeWeaponItem)
+        {
+            primaryAction = currWeapon.weaponActionList[0];
+            secondaryAction = null;
+        }
+        else if (currWeapon is RangedWeaponItem)
+        {
+            primaryAction = currWeapon.weaponActionList[0];
+            secondaryAction = currWeapon.weaponActionList[1];
+        }
+        //else if (currWeapon is BaseWeaponItem && !(currWeapon is MeleeWeaponItem) && !(currWeapon is RangedWeaponItem))
+        //{
+        //    primaryAction = null;
+        //    secondaryAction = null;
+        //}
+        else
+        {
+            primaryAction = null;
+            secondaryAction = null;
+            Debug.LogWarning("Wrong item type");
+        }
     }
 }

@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 593bb5570967d4a418f67ef46407cab0, type: 3}
-  m_Name: Test_WeaponBaseData
+  m_Script: {fileID: 11500000, guid: 68099ccb96ec6774aaeb0a95af20aff5, type: 3}
+  m_Name: Pistol_PrimaryAttack
   m_EditorClassIdentifier: 
-  weightBase: 10
-  priceBase: 5
-  weaponActionList:
-  - {fileID: 11400000, guid: a777f828a0bf0584aafc986d07429acb, type: 2}
+  actionName: Pistol primary attack

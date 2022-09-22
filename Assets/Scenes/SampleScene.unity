@@ -168,7 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d7401496d0a3a24daf5713db70ad5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: {fileID: 11400000, guid: 31de34019ab505f469c20324d7a81ab1, type: 2}
+  weaponLists:
+  - {fileID: 11400000, guid: 9f4ec40f83429ad4b9b337d8eee1b9bb, type: 2}
+  - {fileID: 11400000, guid: 908e8bd5ce68bb148b37f8c2a66a0f04, type: 2}
 --- !u!114 &651971245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde2987c806fd794fa182da792721f69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actionList: []
   playerInventory: {fileID: 651971244}
 --- !u!114 &651971246
 MonoBehaviour:
@@ -195,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 56c2945d9dd9b664c8577e386858031e, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -208,11 +211,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 651971245}
+        m_TargetAssemblyTypeName: PlayerActionManager, Assembly-CSharp
+        m_MethodName: OnPrimaryAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e7388fa5-47c6-46cd-817b-32ce1f59edf9
     m_ActionName: TestActionMap/PrimaryAction[/Mouse/leftButton]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 651971245}
+        m_TargetAssemblyTypeName: PlayerActionManager, Assembly-CSharp
+        m_MethodName: OnSecondaryAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 4a5e7d77-31bf-4e35-a2bb-2393d1856864
     m_ActionName: TestActionMap/SecondaryAction[/Mouse/rightButton]
   - m_PersistentCalls:
@@ -387,7 +414,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912974077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b85a9093d8fad9b48a67925e64e5c4d9, type: 3}
   m_Name: 

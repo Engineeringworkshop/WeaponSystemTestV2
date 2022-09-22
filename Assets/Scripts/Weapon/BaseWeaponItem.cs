@@ -7,10 +7,14 @@ public class BaseWeaponItem
     public float ItemWeight { get; private set; }
     public float ItemPrice { get; private set; }
 
+    public List<PlayerActions> weaponActionList;
+
     public BaseWeaponItem(WeaponBaseData weaponBaseData)
     {
         ItemWeight = weaponBaseData.weightBase;
         ItemPrice = weaponBaseData.priceBase;
+
+        weaponActionList = new List<PlayerActions>(weaponBaseData.weaponActionList);
 
         UpdateRealStats();
     }
