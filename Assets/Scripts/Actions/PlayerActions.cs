@@ -9,6 +9,6 @@ public class PlayerActions : ScriptableObject
 
     public virtual void ExecutePlayerAction()
     {
-
+        
     }
 }

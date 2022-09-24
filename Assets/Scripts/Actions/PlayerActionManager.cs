@@ -51,15 +51,15 @@ public class PlayerActionManager : MonoBehaviour
     {
         var currWeapon = playerInventory.ItemGenerated;
 
-        if (currWeapon is MeleeWeaponItem)
-        {
-            primaryAction = currWeapon.weaponActionList[0];
-            secondaryAction = null;
-        }
-        else if (currWeapon is RangedWeaponItem)
+        if (currWeapon is RangedWeaponItem)
         {
             primaryAction = currWeapon.weaponActionList[0];
             secondaryAction = currWeapon.weaponActionList[1];
+        }
+        else if(currWeapon is MeleeWeaponItem)
+        {
+            primaryAction = currWeapon.weaponActionList[0];
+            secondaryAction = null;
         }
         //else if (currWeapon is BaseWeaponItem && !(currWeapon is MeleeWeaponItem) && !(currWeapon is RangedWeaponItem))
         //{
